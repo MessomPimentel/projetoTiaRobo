@@ -6,19 +6,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TiaRobo {
     private ChromeDriver emersonDriver;
 
-    public void abrirChrome(){
+    public TiaRobo(){
         WebDriverManager.chromedriver().setup();
         emersonDriver = new ChromeDriver();
-        //System.out.println("Vou abrir oChrome!");
-
     }
+
     public void acessarUmSite(){
 
         emersonDriver.get("http://www.estacio.com.br");
     }
 
     public void fazerLogin(){
-        System.out.println("Vou fazer login!");
+        emersonDriver.get("https://sia.estacio.br/sianet/logon");
+
+        //System.out.println("Vou fazer login!");
 
     }
     public void lancarNota(){
